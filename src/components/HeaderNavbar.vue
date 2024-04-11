@@ -20,10 +20,12 @@
         </button>
       </div>
       <!-- menu -->
-      <nav>
+      <!-- <nav>
         <ul class="flex m-2">
           <li class="relative px-6">
-            <a href="#" class="text-gray-500 hover:text-gray-900">Solutions</a>
+            <a href="#" class="text-gray-500 hover:text-gray-900"
+            @mouseover="solutions = !solutions">
+              Solutions</a>
             <transtion
               enter-active-class="transition ease-out duration-200"
               leave-active-class="transition ease-in duration-150"
@@ -34,7 +36,7 @@
             >
               <div class="absolute z-10 transform" v-if="solutions">
                 <ul class="border-t-2 border-red-600 shadow-lg">
-                  <li><a href="#" class="p-4">Item1</a></li>
+                  <li><a href="#">Item1</a></li>
                   <li><a href="#">Analytics</a></li>
                 </ul>
               </div>
@@ -44,15 +46,77 @@
           <li class="px-6"><a href="#">Docs</a></li>
 
         </ul>
+      </nav> -->
+
+      <nav class="flex justify-center">
+        <ul class="flex flex-wrap items-center font-medium text-base">
+          <li class="p-4 lg:px-8">
+            <a href="#" class="text-slate-800 hover:text-slate-900">Prospects</a>
+          </li>
+          <li class="p-4 lg:px-8">
+            <a class="text-slate-800 hover:text-slate-900" href="#">History</a>
+          </li>
+          <li class="p-4 lg:px-8 relative flex items-center space-x-1">
+            <a href="#0" class="text-slate-800 hover:text-slate-900">Flyout Menu</a>
+            <button class="shrink-0 p-1">
+              <span class="sr-only">Show submenu for "Flyout Menu"</span>
+              <svg class="w-3 h-3 fill-slate-500" xmlns="http://www.w3.org/2000/svg" width="12" height="12">
+                  <path d="M10 2.586 11.414 4 6 9.414.586 4 2 2.586l4 4z" />
+              </svg>
+            </button>
+            <!-- 2nd level menu -->
+            <ul class="origin-top-right absolute top-full left-1/2 -translate-x-1/2
+            min-w-[240px] bg-white border border-slate-200 p-2 rounded-lg shadow-xl">
+              <li>
+                <a class="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
+                  <div class="flex items-center justify-center bg-white border
+                  border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
+                    <svg class="fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="9" height="12">
+                      <path d="M8.724.053A.5.5 0 0 0 8.2.1L4.333 3H1.5A1.5 1.5 0
+                      0 0 0 4.5v3A1.5 1.5 0 0 0 1.5 9h2.833L8.2 11.9a.5.5 0 0
+                      0 .8-.4V.5a.5.5 0 0 0-.276-.447Z" />
+                    </svg>
+                  </div>
+                  <span class="whitespace-nowrap">Priority Ratings</span>
+                </a>
+              </li>
+              <li>
+                <a class="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
+                  <div class="flex items-center justify-center bg-white border
+                  border-slate-200 rounded shadow-sm h-7 w-7 shrink-0 mr-3">
+                    <svg class="fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="12" height="12">
+                        <path d="M11.953 4.29a.5.5 0 0 0-.454-.292H6.14L6.984.62A.5.5 0
+                        0 0 6.12.173l-6 7a.5.5 0 0 0 .379.825h5.359l-.844 3.38a.5.5 0 0
+                        0 .864.445l6-7a.5.5 0 0 0 .075-.534Z" />
+                    </svg>
+                  </div>
+                  <span class="whitespace-nowrap">Insights</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="p-4 lg:px-8">
+            <a class="text-slate-800 hover:text-slate-900" href="#">Contacts</a>
+          </li>
+          <li class="p-4 lg:px-8">
+            <a class="text-slate-800 hover:text-slate-900" href="#">Numbers</a>
+          </li>
+        </ul>
       </nav>
 
     </div>
   </header>
 </template>
 
-<!-- <script setup>
+<script>
 import { ref } from 'vue';
+
 export default {
-  const solutions = ref(false),
+  setup() {
+    const solutions = ref(false);
+    return {
+      solutions,
+    };
+  },
 };
-</script> -->
+</script>
