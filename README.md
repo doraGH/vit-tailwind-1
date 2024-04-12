@@ -1,6 +1,8 @@
 # vue-test-1
 
-This template should help get you started developing with Vue 3 in Vite.
+主選單測試tailwind css
+設置使用vue click方法點擊出現次選單
+及使用hover出現次選單的呈現
 
 ## Recommended IDE Setup
 
