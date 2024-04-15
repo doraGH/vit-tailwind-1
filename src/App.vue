@@ -1,12 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
 import HelloWorld from './components/HelloWorld.vue';
-import HeaderNavbar from './components/HeaderNavbar.vue';
+import HeaderNavbar3 from './components/HeaderNavbar3.vue';
+// import HeaderNavbar2 from './components/HeaderNavbar2.vue';
 
 </script>
 
 <template>
-  <HeaderNavbar />
+  <HeaderNavbar3 />
 
   <header class="text-center">
     <img alt="Vue logo" class="mx-auto mt-12 mb-8"

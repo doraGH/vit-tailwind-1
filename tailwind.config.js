@@ -5,7 +5,13 @@ export default {
     './index.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        width: 'width',
+        height: 'height',
+        spacing: 'margin, padding',
+      },
+    },
   },
   plugins: [],
 };

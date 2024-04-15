@@ -21,7 +21,11 @@
         </button>
       </div>
       <!-- pc menu -->
-      <nav class="hidden md:flex space-x-10">
+      <nav :class="{'hidden': !menu, 'md:flex': menu, 'sm:absolute': menu,
+      'sm:absolute': menu, 'sm:top-20': menu, 'sm:inset-x-0': menu, 'sm:p-2': menu,
+      'sm:transition': menu, 'sm:transform': menu, 'sm:origin-top-center': menu }" class="
+      md:flex space-x-10
+      ">
         <ul class="flex flex-wrap items-center font-medium text-base">
           <li class="p-4 lg:px-5">
             <a href="#" class="text-slate-800 hover:text-slate-900">Prospects</a>
@@ -114,23 +118,22 @@
           </li>
         </ul>
       </nav>
+
       <!-- mobile menu -->
-      <nav v-if="menu"
+      <!-- <nav v-if="menu"
       class="absolute top-20 inset-x-0 p-2 transition transform origin-top-center md:hidden">
         <div class="rounded-lg shadow-lg ring-1 ring-opacity-5
         bg-white divide-y-2 divide-gray-50">
         <div class="p-6">
-          <!-- logo + hambur icon -->
           <div class="flex items-center justify-between">
             <a href="#" class="flex items-center text-gray-500 m-1.5 p-1.5">
               <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
               <span class="ml-3 text-2xl">Your Company</span>
             </a>
           </div>
-          <!-- menu -->
         </div>
       </div>
-      </nav>
+      </nav> -->
 
     </div>
   </header>
